@@ -5,7 +5,7 @@ import { Tabs } from "expo-router";
 const _layout = () => {
   return (
     <Tabs>
-      <Tabs.Screen name="tabone" />
+      <Tabs.Screen name="tabOne" />
       <Tabs.Screen name="tabtwo" />
     </Tabs>
   );

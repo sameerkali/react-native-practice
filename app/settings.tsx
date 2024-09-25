@@ -1,15 +1,24 @@
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import React from "react";
-import { Link, useLocalSearchParams } from "expo-router";
+import { Link, useLocalSearchParams, useNavigation } from "expo-router";
 
 const settings = () => {
-    const params = useLocalSearchParams()
-    console.log("params:", params)
+  const navigation = useNavigation();
+  const params = useLocalSearchParams();
+  console.log("params:", params);
   return (
     <View style={styles.home}>
       <Text> I am settings</Text>
-     <Link href={'/profile'}>profile</Link>
-     <Text>{params.name}</Text>
+      <TouchableOpacity
+        onPress={() => {
+          navigation.navigate("(tabs)", {
+            name: "sameer faridi"
+          });
+        }}
+      >
+        <Text>Open Profile</Text>
+      </TouchableOpacity>
+      <Text>{params.name}</Text>
     </View>
   );
 };

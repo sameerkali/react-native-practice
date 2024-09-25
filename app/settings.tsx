@@ -1,12 +1,15 @@
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import React from "react";
-import { Link } from "expo-router";
+import { Link, useLocalSearchParams } from "expo-router";
 
 const settings = () => {
+    const params = useLocalSearchParams()
+    console.log("params:", params)
   return (
     <View style={styles.home}>
       <Text> I am settings</Text>
      <Link href={'/profile'}>profile</Link>
+     <Text>{params.name}</Text>
     </View>
   );
 };

@@ -7,7 +7,7 @@ const index = () => {
   return (
     <View style={styles.home}>
       <Text>I am index</Text>
-      <Link href={`/settings`}><Text>open settings</Text></Link>
+      <Link href={`/settings?name=sameer`}><Text>open settings</Text></Link>
     </View>
   );
 };

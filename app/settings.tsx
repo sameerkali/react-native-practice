@@ -6,7 +6,7 @@ const settings = () => {
   return (
     <View style={styles.home}>
       <Text> I am settings</Text>
-     <Link href={'/'}>home</Link>
+     <Link href={'/profile'}>profile</Link>
     </View>
   );
 };
